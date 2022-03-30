@@ -15,7 +15,7 @@ spec:
   source:
     path: helm/components/car
     repoURL: https://github.com/jsa4000/Getting-Started-GitOps.git
-    targetRevision: deploy-istio
+    targetRevision: main
   syncPolicy:
     automated:
       prune: true

@@ -20,17 +20,17 @@ helm3 repo add argo https://argoproj.github.io/argo-helm
 helm3 repo update
 
 ## Install ArgoCD Helm Chart
-helm3 install argocd -n argocd --create-namespace argo/argo-cd --version 3.33.5
+helm3 install argocd -n argocd --create-namespace argo/argo-cd --version 4.3.1
 
 ## [RECOMMENDED] Install ArgoCD with custom values equal to the application (argocd/argocd.yaml)
-helm3 install argocd -n argocd --create-namespace argo/argo-cd --version 3.33.5 \
+helm3 install argocd -n argocd --create-namespace argo/argo-cd --version 4.3.1 \
   --set redis-ha.enabled=false \
   --set controller.enableStatefulSet=false \
   --set server.autoscaling.enabled=false \
   --set repoServer.autoscaling.enabled=false
 
 # Deploy argocd with custom health checks to wait until resources are healthy
-helm3 install argocd -n argocd --create-namespace argo/argo-cd --version 3.33.5 -f argocd-values.yaml
+helm3 install argocd -n argocd --create-namespace argo/argo-cd --version 4.3.1 -f argocd-values.yaml
 
 # Take a look different ways to deploy ArgoCD: 
 #  - Non HA-Mode

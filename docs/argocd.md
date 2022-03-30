@@ -23,10 +23,10 @@ helm3 repo add argo https://argoproj.github.io/argo-helm
 helm3 repo update
 
 ## Install ArgoCD Helm Chart
-helm3 install argocd -n argocd --create-namespace argo/argo-cd --version 3.33.5
+helm3 install argocd -n argocd --create-namespace argo/argo-cd --version 4.3.1
 
 ## Install ArgoCD
-helm3 install argocd -n argocd --create-namespace argo/argo-cd --version 3.33.5 \
+helm3 install argocd -n argocd --create-namespace argo/argo-cd --version 4.3.1 \
   --set redis-ha.enabled=false \
   --set controller.enableStatefulSet=false \
   --set server.autoscaling.enabled=false \

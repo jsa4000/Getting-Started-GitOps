@@ -31,7 +31,7 @@ spec:
             enabled: false
             minReplicas: 2
     repoURL: https://argoproj.github.io/argo-helm
-    targetRevision: 3.33.5
+    targetRevision: 4.3.1
   syncPolicy:
     automated:
       prune: true
